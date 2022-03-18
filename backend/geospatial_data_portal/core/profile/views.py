@@ -25,14 +25,12 @@ class UserProfileView(RetrieveAPIView):
                     'last_name': user_profile.last_name,
                     }]
                 }
-
         except Exception as e:
             status_code = status.HTTP_400_BAD_REQUEST
             response = {
                 'success': 'false',
                 'status code': status.HTTP_400_BAD_REQUEST,
-                'message': 'User does not exists',
+                'message': 'User does not exists or information is incorrect',
                 'error': str(e)
                 }
-
         return Response(response, status=status_code)

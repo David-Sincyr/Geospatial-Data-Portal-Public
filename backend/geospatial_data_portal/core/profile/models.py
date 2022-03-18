@@ -2,6 +2,11 @@ import uuid
 from django.db import models
 from core.user.models import User
 
+'''
+    This is a model for a user profile. When a user is created, 
+    the relevant information is filled into the database table
+    called profile
+'''
 class UserProfile(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField(db_index=True, max_length=255, unique=True)
