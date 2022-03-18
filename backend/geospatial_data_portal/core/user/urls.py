@@ -3,6 +3,7 @@ from .views import UserRegistrationView, ChangePasswordView, UpdateProfileView, 
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 from django.urls import path
 
+#these contain the various URLS that are invoked from the frontend
 urlpatterns = [
     path('signup/', UserRegistrationView.as_view(), name='signup'),
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
