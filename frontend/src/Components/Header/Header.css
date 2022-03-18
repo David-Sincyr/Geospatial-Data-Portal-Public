@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  position: static;
+  height: 50px;
+  align-items: center;
+  background-image: url("/src/images/bluemarble-navbar.jpg");
+  font-size: 1.2rem;
+  justify-content: left;
+  transform: scaleY(-1);
+}

@@ -1,0 +1,22 @@
+{
+    "extends": ["airbnb", "prettier", "plugin:react/recommended", "plugin:react/jsx-runtime", "eslint:recommended"],
+    "plugins": ["react", "prettier", "jest"],
+    "rules": {
+      "prettier/prettier": "error",
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "func-names": "off",
+      "no-process-exit": "off",
+      "object-shorthand": "off",
+      "class-methods-use-this": "off"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+    },
+    "env": {
+      "browser": true,
+      "jest/globals": true
+    }
+  }

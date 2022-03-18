@@ -1,0 +1,9 @@
+.list-container {
+	background-color: var(--earth);
+}
+
+.list-item {
+	margin: 4px;
+	padding: 8px;
+	background-color: var(--light-blue);
+}

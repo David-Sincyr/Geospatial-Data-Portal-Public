@@ -1,0 +1,77 @@
+/* Default settings for each page */
+.page {
+  display: flex;
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  color: var(--white);
+}
+
+.homepage {
+  background-image: url("/src/images/Home.jpg");
+}
+
+.profile {
+  background-image: url("/src/images/Profile.jpg");
+  color: var(--light-blue);
+}
+
+.projects {
+  background-image: url("/src/images/Projects.jpg");
+  color: var(--light-blue);
+}
+
+.about {
+  background-image: url("/src/images/AboutUs.jpg");
+  color: var(--light-blue);
+}
+
+.user-settings {
+  background-image: url("/src/images/UserSettings.jpg");
+}
+
+.user-settings .card {
+  background-color: var(--sand);
+}
+
+.project-list-view {
+  background-image: url("/src/images/Project-list-view.jpg");
+}
+
+.project-list-view .project-info {
+  background-color: var(--earth);
+}
+
+.project-view {
+  background-image: url("/src/images/ProjectView.jpg");
+}
+
+.login-signup {
+  background-image: url("/src/images/LoginSignUp.jpg");
+}
+
+
+/* Layouts */
+.two-col-container {
+  display: flex;
+}
+
+.two-col-container .column-2 {
+  flex-shrink: 0; /* shrinks to 0 to apply 70% width */
+  flex-basis: 70%; /* sets initial width to 70% */
+}
+
+@media only screen and (max-width: 900px) {
+  .two-col-container {
+    /* Place the items in vertical direction */
+    flex-direction: column;
+  }
+
+  .two-col-container .card {
+    margin: 0 0 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/* Common Styles
+   Usage: var(--light-blue) or var(--round-small) */
+:root {
+  /* Approved Colors */
+  --thin-blue: rgb(181 212 243);
+  --light-blue: rgb(76 134 191);
+  --blue-marble: rgb(14 77 140);
+  --charcoal: rgb(48 48 54);
+  --earth: rgb(205 175 138);
+  --sand: rgb(242 225 204);
+  --white: rgb(255 255 255);
+  --black: rgb (0 0 0);
+
+  /* Rounding */
+  --round-small: 4px;
+  --round-medium: 8px;
+  --round-large: 16px;
+
+  /* Shadows */
+  --shadow-light: 0 0 5px rgba(0 0 0 / 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Common Components */
+.card {
+  margin: 1rem;
+  border-radius: var(--round-medium);
+  border: 2px solid rgba(0 0 0 / 20%);
+  box-shadow: var(--shadow-light);
+  padding: 1rem;
+}

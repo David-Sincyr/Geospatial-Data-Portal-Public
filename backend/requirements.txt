@@ -1,0 +1,11 @@
+Django==3.2.3
+djangorestframework==3.13.1
+django-rest-auth==0.9.5
+django-cors-headers==3.5.0
+django-environ-plus==0.8.1.1
+django-storages==1.12.2
+boto3==1.20.52
+<<<<<<< Updated upstream
+=======
+# gdal==3.4.1
+>>>>>>> Stashed changes

@@ -1,0 +1,163 @@
+/* This controls the Navbar at the top of the screen */
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  align-items: center;
+  background-image: url("/src/images/bluemarble-navbar.jpg");
+  font-size: 1.2rem;
+  justify-content: center;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+}
+
+/* This controls the Nav-bar text */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  color: var(--blue-marble);
+  cursor: pointer;
+  font-size: 2rem;
+  justify-self: start;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.fa-typo3 {
+  font-size: 1.8rem;
+  margin-left: 0.5rem;
+}
+
+.nav-menu {
+  display: grid;
+  width: 60vw;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, auto);
+  justify-content: end;
+  list-style: none;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+/* This effects the menu items (Home, User Menu..ect) */
+.nav-links {
+  display: flex;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  color: var(--blue-marble);
+  text-decoration: none;
+}
+
+/* This controls the botton bar when hovering over a menu item */
+.nav-links:hover {
+  border-bottom: 4px solid var(--charcoal);
+  transition: all 0.2s ease-out;
+}
+
+/* This controls the hamburger menu when the screen is small */
+.fa-bars {
+  color: rgb(3 3 3);
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-items {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: 90vh;
+    flex-direction: column;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    background: #242222;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    display: table;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .nav-links:hover {
+    background-color: rgb(255 251 0);
+    border-radius: 0;
+    color: #242424;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transform: translate(-100%, 60%);
+  }
+
+  .fa-times {
+    color: rgb(0 0 0);
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: rgb(242 225 204);
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}

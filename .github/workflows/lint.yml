@@ -1,0 +1,39 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci # or yarn install
+        working-directory: frontend
+      - name: Run ESLint
+        uses: reviewdog/action-eslint@282bf9d07bc87c519d17ca3a70e94b54232b03e0
+        with:
+          eslint_flags: '--ignore-path ./.eslintignore --ext .js,.jsx .'
+          workdir: frontend
+          reporter: github-check
+          fail_on_error: true
+      - name: Run stylelint
+        uses: reviewdog/action-stylelint@v1.11.0
+        with:
+          github_token: ${{ secrets.github_token }}
+          workdir: frontend
+          reporter: github-check
+          fail_on_error: true
+      - name: Run Black
+        uses: jpetrucciani/black-check@f5c6876aea54003a0db0eb85fa56cc2826aef135
+        with:
+          path: ./backend
+          black_flags: "--check --diff"

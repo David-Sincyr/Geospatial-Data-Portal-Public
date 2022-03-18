@@ -1,0 +1,18 @@
+.button {
+  padding: 8px 20px;
+  background-color: var(--blue-marble);
+  border-radius: var(--round-small);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+}
+
+.button:hover {
+  padding: 6px 18px;
+  background-color: transparent;
+  border: 2px solid var(--blue-marble);
+  color: rgb(48 48 54);
+  transition: all 0.3s ease-out;
+}

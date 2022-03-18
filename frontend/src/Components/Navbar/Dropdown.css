@@ -1,0 +1,36 @@
+.dropdown-menu {
+  position: absolute;
+  top: 80px;
+  width: 200px;
+  list-style: none;
+  text-align: start;
+}
+
+/* Controls the dropdown menu options */
+.dropdown-menu li {
+  background: var(--light-blue);
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: var(--light-blue);
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}

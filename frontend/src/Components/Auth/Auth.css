@@ -1,0 +1,133 @@
+/* Login signup background and text. */
+.login-signup {
+  height: 100vh;
+  font-size: 14px;
+}
+
+/* Button for login-signup. */
+.login-signup input,
+.login-signup button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Basic position for the "file". */
+.login-form {
+  position: relative;
+}
+
+/* Background border/box for login box. */
+.login-form::after {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  content: "";
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--blue-marble),
+    var(--light-blue),
+    var(--thin-blue)
+  );
+}
+
+/* Inner portion of login box. */
+.login-form .file-inner {
+  display: block;
+  position: relative;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* This controls the inner font of the "Login". */
+.login-form .file-inner h2 {
+  color: var(--thin-blue);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* This controls the size of the box. */
+.login-form .file-inner .file-group {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+/* This controls the file login font. */
+.login-form .file-inner .file-group label {
+  display: block;
+  color: var(--light-blue);
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+/* This will change the color of font when user enters box. */
+.login-form .file-inner .file-group:focus-within label {
+  color: var(--blue-marble);
+}
+
+/* Display for the textboxes (slightly off-white for design). */
+.login-form .file-inner .file-group input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgb(250 250 250);
+  border-radius: 8px;
+  transition: 0.4;
+}
+
+/* Shadow around the box of the textboxes. */
+.login-form .file-inner .file-group input:focus {
+  box-shadow: 0 0 3px rgba(0 0 0 / 20%);
+}
+
+/* The lower login button variables. */
+.login-form .file-inner input[type="submit"],
+.welcome-inner button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--blue-marble),
+    var(--light-blue),
+    var(--thin-blue)
+  );
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Animation for hovering over button. */
+.login-form .file-inner input[type="submit"]:hover,
+.welcome-inner button:hover {
+  background-position: 100% 0%;
+}
+
+/* .welcome, .welcome h2 and .welcome h2 span control the welcome screen view. */
+.login-signup .welcome-inner {
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 480px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.login-signup .welcome-inner h2 {
+  color: var(--thin-blue);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.login-signup .welcome-inner h2 span {
+  color: var(--thin-blue);
+  font-weight: 700;
+}

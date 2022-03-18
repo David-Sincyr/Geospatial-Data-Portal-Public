@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  react:
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    container_name: geo_data_portal_react
+    stdin_open: true

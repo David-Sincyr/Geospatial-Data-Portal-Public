@@ -1,0 +1,108 @@
+# React
+frontend/node_modules
+frontend/ncp-debug.log
+frontend/npm-debug.log
+frontend/bower_component
+frontend/src/config/configSec.js
+frontend/.pnp
+frontend/.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/coverage
+frontend/build
+
+
+# Django
+*.log
+*.pot
+*.pyc
+backend/*/__pycache__
+backend/*/local_settings.py
+backend/*/db.sqlite3
+backend/*/media
+pyvenv.cfg
+
+# Backup files
+*.bak 
+
+# Python
+*.py[cod] 
+*$py.class 
+
+# Distribution / packaging 
+backend/.Python build/ 
+backend/develop-eggs/ 
+backend/dist/ 
+backend/downloads/ 
+backend/eggs/ 
+backend/.eggs/ 
+backend/lib/ 
+backend/lib64/ 
+backend/parts/ 
+backend/sdist/ 
+backend/var/ 
+backend/wheels/ 
+backend/*.egg-info/ 
+backend/.installed.cfg 
+backend/*.egg 
+backend/*.manifest 
+backend/*.spec 
+
+# Installer logs 
+backend/pip-log.txt 
+backend/pip-delete-this-directory.txt 
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+# pyenv 
+.python-version 
+
+# Environments 
+*/.env 
+*/.venv 
+*/env/ 
+*/venv/ 
+*/ENV/ 
+*/env.bak/ 
+*/venv.bak/ 
+
+# Package control specific files Package 
+Control.last-run 
+Control.ca-list 
+Control.ca-bundle 
+Control.system-ca-bundle 
+GitHub.sublime-settings 
+
+# Visual Studio Code
+*/.vscode/* 
+!*/.vscode/settings.json 
+!*/.vscode/tasks.json 
+!*/.vscode/launch.json 
+!*/.vscode/extensions.json 
+.history
+
+### macOS
+*/*.DS_Store
+*/.AppleDouble
+*/.LSOverride
+
+# Misc Files
+*/.DocumentRevisions-V100
+*/.fseventsd
+*/.Spotlight-V100
+*/.TemporaryItems
+*/.Trashes
+*/.VolumeIcon.icns
+*/.com.apple.timemachine.donotpresent
+*.env
