@@ -1,25 +1,30 @@
+/* This controls the dropdown menu's background. */
 .dropdown-menu {
   position: absolute;
   top: 80px;
   width: 200px;
+  background: rgb(252, 0, 0);
   list-style: none;
   text-align: start;
 }
 
-/* Controls the dropdown menu options */
+/* This controls the dropdown menu. */
 .dropdown-menu li {
-  background: var(--light-blue);
+  background: var(--LightBlue);
   cursor: pointer;
 }
 
+/* This is the color switch when hovering over part of it. */
 .dropdown-menu li:hover {
-  background: var(--light-blue);
+  background: var(--LightBlue);
 }
 
+/* This handles the menu when clicked. */
 .dropdown-menu.clicked {
   display: none;
 }
 
+/* This controls links from the dropdown. */
 .dropdown-link {
   display: block;
   width: 100%;

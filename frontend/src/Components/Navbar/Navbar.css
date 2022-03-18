@@ -1,4 +1,4 @@
-/* This controls the Navbar at the top of the screen */
+/* This controls the Navbar at the top of the screen*/
 .navbar {
   display: flex;
   position: sticky;
@@ -19,11 +19,11 @@
   max-width: 1500px;
 }
 
-/* This controls the Nav-bar text */
+/*this controls the Nav-bar text*/
 .navbar-logo {
   display: flex;
   align-items: center;
-  color: var(--blue-marble);
+  color: var(--BlueMarble);
   cursor: pointer;
   font-size: 2rem;
   justify-self: start;
@@ -57,19 +57,19 @@
   height: 100%;
   padding: 0.5rem 1rem;
   align-items: center;
-  color: var(--blue-marble);
+  color: var(--BlueMarble);
   text-decoration: none;
 }
 
-/* This controls the botton bar when hovering over a menu item */
+/*This controls the botton bar when hovering over a menu item*/
 .nav-links:hover {
-  border-bottom: 4px solid var(--charcoal);
+  border-bottom: 4px solid var(--Charcoal);
   transition: all 0.2s ease-out;
 }
 
-/* This controls the hamburger menu when the screen is small */
+/*This controls the hamburger menu when the screen is small*/
 .fa-bars {
-  color: rgb(3 3 3);
+  color: rgb(3, 3, 3);
 }
 
 .nav-links-mobile {
@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .navbar-items {
+  .NavbarItems {
     position: relative;
   }
 
@@ -113,7 +113,7 @@
   }
 
   .nav-links:hover {
-    background-color: rgb(255 251 0);
+    background-color: rgb(255, 251, 0);
     border-radius: 0;
     color: #242424;
   }
@@ -136,7 +136,7 @@
   }
 
   .fa-times {
-    color: rgb(0 0 0);
+    color: rgb(0, 0, 0);
     font-size: 2rem;
   }
 
@@ -150,7 +150,7 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: rgb(242 225 204);
+    color: rgb(242, 225, 204);
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
   }

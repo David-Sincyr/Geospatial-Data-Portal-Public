@@ -1,9 +1,35 @@
-.list-container {
-	background-color: var(--earth);
+.project-list-container {
+	display: flex;
+	width: 100%;
 }
 
-.list-item {
+.project-info {
+	width: 30vw;
+	margin: 10px;
+	padding: 10px;
+	background-color: var(--LightBlue);
+}
+
+.project-list {
+	margin: 10px;
+	background-color: var(--Earth);
+	flex-basis: 100%;
+	flex-grow: 1;
+}
+
+.project-list-item {
 	margin: 4px;
 	padding: 8px;
-	background-color: var(--light-blue);
+	background-color: var(--LightBlue);
+	flex-grow: 1;
+}
+
+@media only screen and (max-width: 500px) {
+	.project-list-container {
+		flex-direction: column;
+	}
+	
+	.project-info {
+		width: auto;
+	}
 }

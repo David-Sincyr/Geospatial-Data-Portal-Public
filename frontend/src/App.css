@@ -1,39 +1,106 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-/* Common Styles
-   Usage: var(--light-blue) or var(--round-small) */
+/* Approved colors */
+/* Usage: var(--LightBlue) or var(--Charcoal) */
 :root {
-  /* Approved Colors */
-  --thin-blue: rgb(181 212 243);
-  --light-blue: rgb(76 134 191);
-  --blue-marble: rgb(14 77 140);
-  --charcoal: rgb(48 48 54);
-  --earth: rgb(205 175 138);
-  --sand: rgb(242 225 204);
-  --white: rgb(255 255 255);
-  --black: rgb (0 0 0);
-
-  /* Rounding */
-  --round-small: 4px;
-  --round-medium: 8px;
-  --round-large: 16px;
-
-  /* Shadows */
-  --shadow-light: 0 0 5px rgba(0 0 0 / 50%);
+  --ThinBlue:   rgb(181, 212, 243);
+  --LightBlue: rgb(76, 134, 191);
+  --BlueMarble: rgb(14, 77, 140);
+  --Charcoal: rgb(48, 48, 54);
+  --Earth: rgb(205, 175, 138);
+  --Sand: rgb(242, 225, 204);
+  --White: rgb(255, 255, 255);
+  --Black: rgb (0, 0, 0);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans';
 }
 
-/* Common Components */
-.card {
-  margin: 1rem;
-  border-radius: var(--round-medium);
-  border: 2px solid rgba(0 0 0 / 20%);
-  box-shadow: var(--shadow-light);
-  padding: 1rem;
+/* Default settings for each page. */
+.about,
+.homepage,
+.profile,
+.project-list-view,
+.project-view,
+.user-settings,
+.projects
+{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/*
+Each page is as listed each with there own default options which includes;
+color, font size, background, position, etc.
+*/
+
+.homepage {
+  background-image: url('./images/Home.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+}
+
+.profile {
+  background-image: url('./images/Profile.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--LightBlue);
+  font-size: 100px;
+}
+
+.projects {
+  background-image: url('./images/Projects.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--LightBlue);
+  font-size: 100px;
+}
+
+.about {
+  background-image: url('./images/AboutUs.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--LightBlue);
+  font-size: 100px;
+}
+
+.user-settings {
+  background-image: url('./images/UserSettings.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+}
+
+
+.project-list-view {
+  background-image: url('./images/Project-list-view.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+}
+  
+.project-view {
+  background-image: url('./images/ProjectView.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
 }

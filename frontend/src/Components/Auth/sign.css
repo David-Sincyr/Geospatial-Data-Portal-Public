@@ -1,0 +1,165 @@
+/* These are the approved colors, fonts and basic text settings found within the offical 
+   blue marble documentation. You can use each color by calling var(--Color) */
+    :root {
+        --ThinBlue:   rgb(181, 212, 243);
+        --LightBlue:  rgb(76,134,191);
+        --BlueMarble: rgb(14,77,140);
+        --Charcoal:   rgb(48,48,54);
+        --Soil:       rgb(102, 85, 68);
+        --Earth:      rgb(205,175,138);
+        --Sand:       rgb(242,225,204);
+        --OffWhite:   rgb(240, 240, 240);
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Open Sans';
+        }
+
+/* This handles the background of the login page. */
+.sign-up {
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('../../images/SignUp.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* This handles some of the basic text on the page. */
+.sign-up {
+  font-weight: bold;
+  color: var(--LightBlue);
+  font-size: 14px;
+}
+
+/* This is the basic button model. */
+input, button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* This is basic formatting for the background of the page. */
+form {
+  display: block;
+  position: relative;
+}
+
+/* This is the background and border for the login box. */
+form:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: 1;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
+}
+
+/* This is the inner background of the login box. */
+form .file-inner {
+  position: relative;
+  display: block;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* This controls the inner font. */
+form .file-inner h2  {
+  color: var(--LightBlue); 
+  font-size: 28px;
+  font-weight: bold;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* This controls the size of the box. */
+form .file-inner .file-group {
+  display: block;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+/* this controls the file signup font. */
+.file-inner .file-group label {
+  display: block;
+  color: var(--LightBlue);
+  font-size: 12px;
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+
+/* This will change the color of font when user enters box. */
+.file-inner .file-group:focus-within label {
+  color: var(--BlueMarble);
+}
+
+/* Display for the textboxes (slightly off-white for design).*/
+form .file-inner .file-group input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--OffWhite);
+  border-radius: 8px;
+  transition: 0.4;
+}
+
+/* Shadow around the box of the textboxes. */
+form .file-inner .file-group input:focus {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* This handles the signup buttons size, text, background, position and color. */
+form .file-inner input[type = "submit"], .welcome-inner button {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* This is the popout animation for hovering over the signup button. */
+form .file-inner input[type = "submit"]:hover, .welcome-inner button:hover {
+  background-position: 100% 0%;
+}
+
+/* This controls the basic background for the "welcome page" after login. */
+.welcome-inner {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
+}
+
+/* This controls the text within the "welcome page" after login. */
+.welcome-inner h2 {
+  color: var(--ThinBlue);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px
+}
+
+/* This controls the extra header text for the welcome page. */
+.welcome-inner h2 span {
+  color: var(--ThinBlue);
+  font-weight: 700;
+}

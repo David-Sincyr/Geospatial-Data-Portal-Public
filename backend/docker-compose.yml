@@ -1,27 +1,28 @@
 version: '3.8'
+
 services:
+
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
   django:
     build:
       context: .
     ports:
       - '8000:8000'
-    environment:
-      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
-      AWS_SECRET_KEY: ${AWS_SECRET_KEY}
-      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
-      S3_BUCKET_LOCATION: ${S3_BUCKET_LOCATION}
     container_name: geo_data_portal_django
-  web:
-    build:
-      context: .
-    tty: true
-  mysql:
-    image: mysql/mysql-server:8.0.23
-    ports:
-      - 8083:3306
-    volumes:
-      - ./test-sql-2:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: admin
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - db
+volumes:
+  postgres_data:
     

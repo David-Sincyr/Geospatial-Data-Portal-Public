@@ -1,18 +1,21 @@
+/* This is the stock button format which is used across numerous documents. */
 .button {
   padding: 8px 20px;
-  background-color: var(--blue-marble);
-  border-radius: var(--round-small);
+  background-color: var(--BlueMarble);
+  border-radius: 4px;
   border: none;
-  color: var(--white);
+  color: var(--White);
   cursor: pointer;
   font-size: 18px;
   outline: none;
 }
 
+/* This is the "animation" effect which occurs if you hover over the button. */
 .button:hover {
   padding: 6px 18px;
   background-color: transparent;
-  border: 2px solid var(--blue-marble);
-  color: rgb(48 48 54);
+  border-radius: 4px;
+  border: 2px solid var(--BlueMarble);
+  color: rgb(48, 48, 54);
   transition: all 0.3s ease-out;
 }
