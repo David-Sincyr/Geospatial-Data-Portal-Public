@@ -1,46 +1,15 @@
-
-/* These are the approved colors, fonts and basic text settings found within the offical 
-   blue marble documentation. You can use each color by calling var(--Color) */
-:root {
-  --ThinBlue:   rgb(181, 212, 243);
-  --LightBlue:  rgb(76,134,191);
-  --BlueMarble: rgb(14,77,140);
-  --Charcoal:   rgb(48,48,54);
-  --Soil:       rgb(102, 85, 68);
-  --Earth:      rgb(205,175,138);
-  --Sand:       rgb(242,225,204);
-  --OffWhite:   rgb(240, 240, 240);
-  }
-        
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans';
-  }
-
-/* This handles the background of the login page. */
-.login-logout {
+.auth-page {
   height:100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  background-image: url('../../images/LoginLogout.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* This handles some of the basic text on the page. */
-.login-logout {
+  /* This handles some of the basic text on the page. */
   font-weight: bold;
-  color: var(--LightBlue);
+  color: var(--light-blue);
   font-size: 14px;
 }
 
 /* This is the basic button model. */
-input, button {
+.auth-page input,
+.auth-page button {
   appearance: none;
   background: none;
   border: none;
@@ -48,15 +17,13 @@ input, button {
 }
 
 /* This is basic formatting for the background of the page. */
-form {
-  display: block;
+.auth-form {
   position: relative;
 }
 
 /* This is the background and border for the login box. */
-form:after {
+.auth-form::after {
   content: '';
-  display: block;
   position: absolute;
   top: -10px;
   left: -10px;
@@ -64,22 +31,22 @@ form:after {
   bottom: -10px;
   z-index: 1;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
+  background-image: linear-gradient(to bottom right, var(--blue-marble), var(--light-blue), var(--thin-blue));
 }
 
 /* This is the inner background of the login box. */
-form .file-inner {
+.auth-form .auth-inner {
   position: relative;
   display: block;
-  background-color: white;
+  background-color: var(--white);
   padding: 30px;
   border-radius: 8px;
   z-index: 2;
 }
 
-/* This controls the inner font of the "Login". */
-form .file-inner h2  {
-  color: var(--LightBlue); 
+/* This controls the inner font of the 'Login'. */
+.auth-form .auth-inner h2  {
+  color: var(--light-blue); 
   font-size: 28px;
   font-weight: bold;
   font-weight: 500;
@@ -87,101 +54,81 @@ form .file-inner h2  {
 }
 
 /* This controls the size of the box. */
-form .file-inner .file-group {
-  display: block;
-  width: 300px;
+.auth-form .auth-inner .auth-input-container {
+  min-width: 300px;
   margin-bottom: 15px;
 }
 
 /* This controls the files login font. */
-.file-inner .file-group label {
-  display: block;
-  color: var(--LightBlue);
+.auth-page .auth-inner .auth-input-container label {
+  color: var(--light-blue);
   font-size: 12px;
   margin-bottom: 5px;
   transition: 0.4s;
 }
 
 /* This will change the color of font when user enters box. */
-.file-inner .file-group:focus-within label {
-  color: var(--BlueMarble);
+.auth-page .auth-inner .auth-input-container:focus-within label {
+  color: var(--blue-marble);
 }
 
-/* Display for the textboxes (slightly off-white for design).*/
-form .file-inner .file-group input {
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  background-color: var(--OffWhite);
-  border-radius: 8px;
-  transition: 0.4;
-}
-
-/* Shadow around the box of the textboxes. */
-form .file-inner .file-group input:focus {
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* The lower login button variables, handles the submission. */
-form .file-inner input[type = "submit"], .welcome-inner button {
+.auth-form .auth-inner input[type = 'submit'],
+.auth-form .auth-inner input[type = 'button'],
+.welcome-container button {
   display: inline-block;
   padding: 10px 15px;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
   background-size: 200%;
   background-position: 0%;
   transition: 0.4s;
   color: white;
   font-weight: 700;
   cursor: pointer;
+  margin-right: 10px;
 }
 
-/* This is the popout animation for hovering over login button. */
-form .file-inner input[type = "submit"]:hover, .welcome-inner button:hover {
-  background-position: 100% 0%;
+/* The lower login button variables, handles the submission. */
+.auth-form .auth-inner #auth-submit-button {
+  background-image: linear-gradient(to bottom right, var(--blue-marble), var(--light-blue), var(--thin-blue));
 }
 
 /* This handles the signup buttons size, text, background, position and color. */
-form .file-inner input[type = "signup"], .welcome-inner button {
-  margin-left: 10px;
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 8px;
-  background-image: linear-gradient(to bottom right, var(--ThinBlue), var(--LightBlue), var(--BlueMarble));
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: white; 
-  font-weight: 700;
-  cursor: pointer;
+.auth-form .auth-inner #sign-up-button, .welcome-container button {
+  background-image: linear-gradient(to bottom right, var(--thin-blue), var(--light-blue), var(--blue-marble));
 }
 
-/* The animation for hovering over signup button. */
-form .file-inner input[type = "signup"]:hover, .welcome-inner button:hover {
-  margin-left: 10px;
+/* This is the popout animation for hovering over login and signup buttons. */
+.auth-form .auth-inner #auth-submit-button:hover,
+.auth-form .auth-inner #signup-button:hover {
   background-position: 100% 0%;
 }
 
-/* This controls the basic background for the "welcome page" after login. */
-.welcome-inner {
+.auth-page #auth-error {
+  color: var(--white);
+  background-color: var(--error);
+  margin-bottom: 15px;
+}
+
+/* This controls the basic background for the 'welcome page' after login. */
+.auth-page .welcome-container {
   width: 100%;
   max-width: 480px;
   background-color: white;
   padding: 15px 30px;
   border-radius: 8px;
-  border-image: linear-gradient(to bottom right, var(--BlueMarble), var(--LightBlue), var(--ThinBlue));
+  border-image: linear-gradient(to bottom right, var(--blue-marble), var(--light-blue), var(--thin-blue));
 }
 
-/* This controls the text within the "welcome page" after login. */
-.welcome-inner h2 {
-  color: var(--ThinBlue);
+/* This controls the text within the 'welcome page' after login. */
+.auth-page div.welcome-container h2 {
+  color: var(--thin-blue);
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 30px
 }
 
 /* This controls the extra header text for the welcome page. */
-.welcome-inner h2 span {
-  color: var(--ThinBlue);
+.auth-page .welcome-container h2 span {
+  color: var(--thin-blue);
   font-weight: 700;
 }

@@ -1,7 +1,7 @@
-import "./Pages.css";
+import './Pages.css';
 
 function Profile() {
-  return <h1 className="page profile">Profile</h1>;
+  return <h1 className='page profile'>Profile</h1>;
 }
 
 export default Profile;

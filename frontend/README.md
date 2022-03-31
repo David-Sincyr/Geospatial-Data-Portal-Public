@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+<!-- 
+This application uses Open Source components. 
+You can find the source code of their open source projects used in the frontend below. 
+We acknowledge and are grateful to these developers for their contributions to open source.
+
+https://github.com/briancodex/react-navbar-dropdown
+-->

@@ -8,29 +8,36 @@ from core.profile.models import UserProfile
 class UserProfileView(RetrieveAPIView):
     permission_classes = (IsAuthenticated,)
 
-    '''
-        Attempts to retrieve a user profile, its first and last name.
-        It requires an access token to be able to retrieve data
-    '''
     def get(self, request):
+        """
+        Attempts to retrieve user profile data.
+        It requires a valid access token to be able to retrieve data.
+        """
         try:
             user_profile = UserProfile.objects.get(user=request.user)
             status_code = status.HTTP_200_OK
             response = {
-                'success': 'true',
-                'status code': status_code,
-                'message': 'User profile fetched successfully',
-                'data': [{
-                    'first_name': user_profile.first_name,
-                    'last_name': user_profile.last_name,
-                    }]
-                }
+                "success": "true",
+                "status code": status_code,
+                "message": "User profile fetched successfully",
+                "data": [
+                    {
+                        "first_name": user_profile.first_name,
+                        "last_name": user_profile.last_name,
+                        "username": user_profile.username,
+                        "Email": user_profile.email,
+                    }
+                ],
+            }
+
+        # If there is no user with the specified token, then returns this message
         except Exception as e:
             status_code = status.HTTP_400_BAD_REQUEST
             response = {
-                'success': 'false',
-                'status code': status.HTTP_400_BAD_REQUEST,
-                'message': 'User does not exists or information is incorrect',
-                'error': str(e)
-                }
+                "success": "false",
+                "status code": status.HTTP_400_BAD_REQUEST,
+                "message": "Something went wrong",
+                "error": str(e),
+            }
+
         return Response(response, status=status_code)

@@ -1,28 +1,30 @@
 version: '3.8'
 
 services:
-
   db:
     image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=BlueMarbleGeoAdmin
+      - POSTGRES_PASSWORD=BlueMarbleGeo
 
   django:
     build:
       context: .
     ports:
       - '8000:8000'
-    container_name: geo_data_portal_django
     environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      POSTGRES_NAME: postgres
+      POSTGRES_USER: BlueMarbleGeoAdmin
+      POSTGRES_PASSWORD: BlueMarbleGeo
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_KEY: ${AWS_SECRET_KEY}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      S3_BUCKET_LOCATION: ${S3_BUCKET_LOCATION}
+    container_name: geo_data_portal_django  
     depends_on:
       - db
 volumes:
   postgres_data:
-    

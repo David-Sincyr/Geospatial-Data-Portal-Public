@@ -1,4 +1,4 @@
-<img src="./TeamUndershrub_Logo.png" alt="Team Undershrub Logo" height="200"/>
+<img src='./TeamUndershrub_Logo.png' alt='Team Undershrub Logo' height='200'/>
 
 # Running local development servers
 ## Prerequisites

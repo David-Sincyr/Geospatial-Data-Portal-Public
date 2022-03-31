@@ -1,7 +1,8 @@
-import "./Upload.css";
-import React from "react";
-import Button from "../Button/Button";
+import './Upload.css';
+import React from 'react';
+import Button from '../Button/Button';
 
+/* This function allows a user to upload files from their desktop through the browser. */
 function Upload() {
   const [selectedFile, setSelectedFile] = React.useState(null);
   const buttonRef = React.useRef(null);
@@ -10,27 +11,25 @@ function Upload() {
     buttonRef.current.click();
   };
 
-  const onFileChange = (e) => {
+  const onFileChange = e => {
     setSelectedFile(e.target.files[0]);
   };
 
   const onFileUpload = () => {
-    // Create an object of formData
-    const formData = [];
+    // Create an object of formData.
+    const formData = new FormData();
 
-    // Update the formData object
+    // Update the formData object.
     if (selectedFile) {
-      formData.push({ filename: selectedFile.name, file: selectedFile });
-
-      // Details of the uploaded file
+      formData.append('myFile', selectedFile, selectedFile.name);
+      // Details of the uploaded file.
       console.log(selectedFile);
     } else {
-      console.log("Error: Please select a file");
+      console.log('Error: Please select a file');
     }
   };
 
-  // File content to be displayed after
-  // file upload is complete
+  // File content to be displayed after file upload is complete.
   const fileData = () => {
     if (selectedFile) {
       return (
@@ -53,9 +52,9 @@ function Upload() {
   return (
     <div>
       <div>
-        <input ref={buttonRef} type="file" onChange={onFileChange} />
-        <Button name="Browse..." handleClick={openFileBrowser} />
-        <Button name="Upload" handleClick={onFileUpload} />
+        <input ref={buttonRef} type='file' onChange={onFileChange} />
+        <Button name='Browse...' handleClick={openFileBrowser} />
+        <Button name='Upload' handleClick={onFileUpload} />
       </div>
       {fileData()}
     </div>

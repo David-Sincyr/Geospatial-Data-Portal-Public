@@ -3,20 +3,19 @@
   position: absolute;
   top: 80px;
   width: 200px;
-  background: rgb(252, 0, 0);
   list-style: none;
   text-align: start;
 }
 
 /* This controls the dropdown menu. */
 .dropdown-menu li {
-  background: var(--LightBlue);
+  background: var(--light-blue);
   cursor: pointer;
 }
 
 /* This is the color switch when hovering over part of it. */
 .dropdown-menu li:hover {
-  background: var(--LightBlue);
+  background: var(--light-blue);
 }
 
 /* This handles the menu when clicked. */

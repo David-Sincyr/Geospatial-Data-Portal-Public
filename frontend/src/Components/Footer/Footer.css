@@ -4,8 +4,8 @@
   position: static;
   height: 50px;
   align-items: center;
-  background-color: linear-gradient(to left, --BlueMarble, --LightBlue);
-  background-image: url("/src/images/bluemarble-navbar.jpg");
+  background-color: linear-gradient(to left, --blue-marble, --light-blue);
+  background-image: url('/src/images/bluemarble-navbar.jpg');
   font-size: 0.8rem;
-  justify-content: Center;
+  justify-content: center;
 }

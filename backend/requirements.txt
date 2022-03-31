@@ -1,12 +1,13 @@
 Django==3.2.3
+
+
+# These are the dependencies for authentication and the database.
+djangorestframework-simplejwt==4.7.1
+django-cors-headers==3.7.0
+psycopg2>=2.8
+djangorestframework==3.13.1
+django-rest-auth==0.9.5
 django-environ-plus==0.8.1.1
 django-storages==1.12.2
 boto3==1.20.52
 
-
-#these are the dependencies for authentication and the database
-django-rest-auth==0.9.5
-djangorestframework==3.12.4
-djangorestframework-simplejwt==4.7.1
-django-cors-headers==3.7.0
-psycopg2>=2.8
